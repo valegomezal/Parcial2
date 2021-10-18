@@ -6,12 +6,13 @@
 # @ --> vector
 $repeticiones =30;
 @ejecutables = ("matricesApp");
-@matrizSize = ("100","200","400","800","1000","1200","2000","4000");
-@cores=("1","2","4","6","8");
+@matrizSize = ("100","200","400","800","1000","1200","2000","4000");//tamaño de las matrices 
+@cores=("1","2","4","6","8");#estos son los cores que se llevaran a cabo
 $path = "/Users/valentinagomez/projects/ParcialUno/Algorirmo3/";
 
 foreach $exe (@ejecutables) {
 	foreach $size (@matrizSize) {
+	#por medio de este foreach se recorreran cada una de los hilos mecionados anteriormente
 	  foreach $core (@cores){
 		$fichero = "$path"."Soluciones/"."$exe"."-size"."$size"."-Core"."$core";
 		#print("$fichero\n");
